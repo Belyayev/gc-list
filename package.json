@@ -1,0 +1,19 @@
+{
+  "name": "groceries-app",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "axios": "^0.21.0",
+    "isomorphic-unfetch": "^2.0.0",
+    "next": "9.5.3",
+    "react": "16.13.1",
+    "react-dom": "16.13.1",
+    "react-redux": "^7.2.2",
+    "redux": "^4.0.5"
+  }
+}
