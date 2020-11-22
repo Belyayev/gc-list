@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import Layout from '../components/Layout';
-import Items from '../components/Items';
 import ItemsList from '../components/ItemsList';
 import NewItem from '../components/NewItem';
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import axios from 'axios';
 
 const initialState = {
   items: [],

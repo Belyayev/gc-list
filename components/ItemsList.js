@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+let API_URL="https://limitless-lake-72784.herokuapp.com/listitems/";
 
 const Item = (e) => (
     <tr>
@@ -17,7 +18,7 @@ function ItemsList (props) {
     let trigger=[1];
 
     const getItems = () => {
-        axios.get('https://limitless-lake-72784.herokuapp.com/listitems/')
+        axios.get(API_URL)
         .then(response => {
             props.dispatch({type: "UPDATE", payload: response.data})
         })
@@ -32,7 +33,7 @@ function ItemsList (props) {
     }, trigger)
 
     const deleteItem = (id) => {
-        axios.delete('https://limitless-lake-72784.herokuapp.com/listitems/'+id)
+        axios.delete(API_URL+id)
           .then(response => { console.log(response.data)});
     
         props.dispatch({

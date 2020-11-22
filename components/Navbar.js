@@ -5,7 +5,7 @@ const Navbar = () => (
     <div className="container">
       <a className="navbar-brand" href="#">
       <i aria-hidden className='fas fa-shopping-cart mr-2 ml-4'></i>
-        Groceries list App</a>
+        Groceries List</a>
       <div className="collapse navbar-collapse">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">

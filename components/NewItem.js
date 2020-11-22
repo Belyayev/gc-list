@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
+let API_URL="https://limitless-lake-72784.herokuapp.com/listitems/";
 
 function NewItem (props) {
 
   const getItems = () => {
-    axios.get('https://limitless-lake-72784.herokuapp.com/listitems/')
+    axios.get(API_URL)
     .then(response => {
         props.dispatch({type: "UPDATE", payload: response.data})
     })
@@ -27,7 +28,7 @@ function NewItem (props) {
 
       console.log(item);
       
-      axios.post('https://limitless-lake-72784.herokuapp.com/listitems/add', item)
+      axios.post(API_URL+'add', item)
       .then(res => console.log(res.data));
 
       props.dispatch({type: "RESET"});
